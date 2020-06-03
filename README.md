@@ -1,5 +1,3 @@
-# fluttercovid19
-
 Flutter Covid19 App
 
 ## Getting Started
