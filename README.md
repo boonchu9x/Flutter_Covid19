@@ -1,5 +1,8 @@
 ## Flutter Covid19 App
 
+Follow design:
+![Image of Yaktocat](assets/covid19_app.png)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
