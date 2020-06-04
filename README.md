@@ -3,6 +3,8 @@
 Follow design:
 ![Image of Yaktocat](assets/covid19_app.png)
 
+- [Video Youtube](https://www.youtube.com/watch?v=yG3WiFu2aUE&t=51s)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
