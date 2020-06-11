@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttercovid19/core/flutter_icons.dart';
+import 'package:fluttercovid19/pages/static.dart';
 
 import '../core/constant.dart';
 
@@ -98,24 +99,32 @@ class _HomePageState extends State<HomePage> {
                   ),
 
                   //list view prevention
-                  Container(
-                    height: 100,
-                    child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      padding: EdgeInsets.only(left: 20),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => StaticPage()),
+                      );
+                    },
+                    child: Container(
+                      height: 100,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        padding: EdgeInsets.only(left: 20),
 
-                      //anim scroll listview
-                      physics: BouncingScrollPhysics(),
-                      children: <Widget>[
-                        _buildPreventionItem('assets/images/a10.png',
-                            'Wash'.toUpperCase(), 'honds often'),
-                        _buildPreventionItem('assets/images/a4.png',
-                            'Cover'.toUpperCase(), 'your cough'),
-                        _buildPreventionItem('assets/images/a6.png',
-                            'Always'.toUpperCase(), 'clean'),
-                        _buildPreventionItem('assets/images/a9.png',
-                            'Use'.toUpperCase(), 'mask'),
-                      ],
+                        //anim scroll listview
+                        physics: BouncingScrollPhysics(),
+                        children: <Widget>[
+                          _buildPreventionItem('assets/images/a10.png',
+                              'Wash'.toUpperCase(), 'honds often'),
+                          _buildPreventionItem('assets/images/a4.png',
+                              'Cover'.toUpperCase(), 'your cough'),
+                          _buildPreventionItem('assets/images/a6.png',
+                              'Always'.toUpperCase(), 'clean'),
+                          _buildPreventionItem('assets/images/a9.png',
+                              'Use'.toUpperCase(), 'mask'),
+                        ],
+                      ),
                     ),
                   ),
 
@@ -125,7 +134,8 @@ class _HomePageState extends State<HomePage> {
 
                   Container(
                     height: 100,
-                    margin: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 20),
+                    margin: EdgeInsets.only(
+                        left: 20, right: 20, top: 10, bottom: 20),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(
                           Radius.circular(20),
@@ -238,7 +248,7 @@ Widget _buildSymptomItem(String assetsImage, String titleItem) {
               //gradient for cardview
               gradient: LinearGradient(
                 colors: [
-                  Colors.purple[100],
+                  alphaColor80,
                   Colors.white,
                 ],
                 begin: Alignment.topCenter,
